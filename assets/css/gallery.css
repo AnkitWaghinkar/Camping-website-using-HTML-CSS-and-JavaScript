@@ -1,0 +1,305 @@
+:root{
+    --body-background-color:#0d0d0d;
+    --text-color:#9ca3af;
+    --year-title-text:#3b82f6;
+    --year-title-hover:#a855f7;
+    --image-border-hover:#cfcdc8;
+    --nav-bg: rgba(255, 255, 255, 0.76); 
+    --sidebar-bg: rgba(255, 255, 255, 0.315);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--body-background-color);
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+/* Navigation */
+nav{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--nav-bg);
+    backdrop-filter: blur(10px);
+    box-shadow: 8px 8px 5px 0 rgba(0, 0, 0, 0.616);
+    border-radius: 0 0 8px 8px;
+    z-index: 1;
+}
+
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav li{
+    height: 50px;
+}
+
+nav a{
+    height: 100%;
+    padding: 0 25px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+    transition: all 0.3s linear;
+}
+
+nav a:hover{
+    color: var(--image-border-hover);
+    background-color: var(--body-background-color);
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    border-radius: 0 0 8px 8px;
+}
+
+.brandName{
+    margin-right: auto;
+    pointer-events: none;
+
+    @media (max-width:800px) {
+        margin: 0;
+        align-self: flex-end;
+    }
+}
+
+nav li img{
+    height: 16px;
+    width: 16px;
+}
+
+.sidebar{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    width: 250px;
+    z-index: 999;
+    background-color: var(--sidebar-bg);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0px 10px 0 rgba(0, 0, 0, 0.329);
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.sidebar li,
+.sidebar a{
+    width: 100%;
+}
+
+.showsidebar{
+    display: none;
+    margin-left: calc(20%);
+}
+
+@media (max-width:860px) {
+    .hideOnMobile{
+        display: none;
+    }
+
+    .showsidebar{
+        display: block;
+    }
+}
+
+@media (max-width:400px) {
+    .sidebar{
+        width: 100%;
+    }
+}
+
+
+/* gallery */
+.gallery-header{
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.gallery-title{
+    font-size: 2.5rem;
+    font-weight: 700;
+    position: relative;
+    top: 30px;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, #3b82f6, #a855f7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gallery-subtitle{
+    position: relative;
+    top: 30px;
+    color:var(--text-color);
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    letter-spacing: 0.5px;
+}
+
+.gallery-subtitle a{
+    color: var(--year-title-text);
+    text-decoration: none;
+}
+
+.gallery-subtitle a:hover{
+    color:var(--year-title-hover);
+}
+
+.year-title{
+    color: var(--year-title-text);
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+}
+
+.year-title::after {
+    content: "";
+    display: block;
+    width: 6rem;
+    height: 3px;
+    background: linear-gradient(90deg, #3b82f6, #a855f7);
+    margin: 0.5rem auto 0;
+    border-radius: 3px;
+}
+
+#year2024{
+    min-height: 100vh;
+    padding: 0.8rem;
+}
+
+#year2025{
+    min-height: 80vh;
+    padding: 0.8rem;
+}
+
+.gallery-grid2024, .gallery-grid2025 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(7rem, 1fr)); 
+    gap: 0.6rem;
+    padding: 0 1rem;
+    margin-top: 0.6rem;
+    margin-bottom: 1rem;
+}
+
+.gallery-grid2024 img, .gallery-grid2025 img{
+    width: 100%;        
+    height: auto;   
+    aspect-ratio: 16 / 10;    
+    display: block;    
+    object-fit: cover; 
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 16px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s linear;
+    cursor: pointer;
+}
+
+/* 3 span height */
+.gallery-grid2025 .tall, .gallery-grid2024 .tall{
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-row: span 3;
+    height: 100%;
+}
+
+
+/* 11th image in grid 2023 */
+.gallery-grid2024 img:nth-child(12){
+    object-position: 0 0;
+}
+
+
+/* 2 span height */
+.gallery-grid2024 .medium{
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-row: span 2;
+    height: 100%;
+}
+
+.gallery-grid2024 img:nth-child(6){
+    object-position: 0 -2rem;
+}
+
+.gallery-grid2024 img:nth-child(14){
+    object-position: 0 -1rem;
+}
+
+.gallery-grid2025 img:last-child{
+    object-fit: cover;
+    object-position: 0 0;
+}
+
+/* videos */
+#iframe-videos{
+    min-height: 100dvh;
+}
+
+.gallery-grid-vids{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(7rem, 1fr)); 
+    gap: 0.6rem;
+    padding: 0 1rem;
+    margin-top: 0.6rem;
+    margin-bottom: 1rem;
+}
+
+.gallery-grid-vids iframe,
+.gallery-grid-vids video {
+    width: 100%;
+    height: 100%;         
+    object-fit: cover;  
+    border-radius: 0.5rem;
+    aspect-ratio: 16/9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 
+                0 6px 16px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s linear;
+    cursor: pointer;
+    display: block;
+}
+
+/* Tall items (3 rows high) */
+.gallery-grid-vids .tall {
+    grid-row: span 3;
+    aspect-ratio: auto;   
+}
+
+/* Medium items (2 rows high) */
+.gallery-grid-vids .medium {
+    grid-row: span 2;
+    aspect-ratio: auto;
+}
+
+/* for smooth animation */
+.section {
+  opacity: 0;
+  transform: translateY(40px);   
+  transition: all 0.8s ease-out; 
+}
+
+.section.show {
+  opacity: 1;
+  transform: translateY(0);     
+}

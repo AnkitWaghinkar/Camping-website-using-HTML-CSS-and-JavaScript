@@ -1,0 +1,267 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.76);
+    backdrop-filter: blur(10px);
+    box-shadow: 8px 8px 5px 0 rgba(0, 0, 0, 0.616);
+    border-radius: 0 0 8px 8px;
+    z-index: 1;
+}
+
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav li{
+    height: 50px;
+}
+
+nav a{
+    height: 100%;
+    padding: 0 25px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+    transition: all 0.3s linear;
+}
+
+nav a:hover{
+    color: white;
+    background-color: #1a1b1d;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    border-radius: 0 0 8px 8px;
+}
+
+.brandName{
+    margin-right: auto;
+    pointer-events: none;
+
+    @media (max-width:800px) {
+        margin: 0;
+        align-self: flex-end;
+    }
+}
+
+nav li img{
+    height: 16px;
+    width: 16px;
+}
+
+.sidebar{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    width: 250px;
+    z-index: 999;
+    background-color:  rgba(255, 255, 255, 0.315);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0px 10px 0 rgba(0, 0, 0, 0.329);
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.sidebar li,
+.sidebar a{
+    width: 100%;
+}
+
+.showsidebar{
+    display: none;
+    margin-left: calc(20%);
+}
+
+@media (max-width:860px) {
+    .hideOnMobile{
+        display: none;
+    }
+
+    .showsidebar{
+        display: block;
+    }
+}
+
+@media (max-width:400px) {
+    .sidebar{
+        width: 100%;
+    }
+}
+
+body{
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0d0d0d;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+h1{
+    position: relative;
+    top: 30px;
+    color: #cfd2d8;
+    padding: 0 1rem;
+}
+
+.display-item-text{
+    color: #cfd2d8;
+    padding: 0 2rem;
+    position: relative;
+    top: 35px;
+}
+
+/* anchor links to Lost and found form  */
+.to-form-links{
+    color: #3b82f6;
+}
+
+.to-form-links:hover{
+    color: #60a5fa;
+}
+
+.formheading{
+    padding: 0.5rem 0;
+    margin: 0 0.5rem;
+    width: calc(100dvw - 35%);
+    color: #cfd2d8;
+    justify-self: center;
+}
+
+.formheading a{
+    color: #3b82f6;
+}
+
+/* found items container */
+.found-items-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 95%;
+    height: auto;
+    margin: 1rem;
+    background-color: #1a1b1d;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+    border-radius: 1rem;
+    top: 40px;
+}
+
+/* items */
+.items-div{
+    position: relative;
+    width: calc(100% - 2rem);
+    height: auto;
+    padding: 0.3rem 0;
+    background-color: #0f0f10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(228, 234, 236, 0.096);
+    border-radius: 0.325rem;
+    margin: 0.8rem 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* item images */
+.item-found-image-div{
+    height: 9rem;
+    width: 9rem; 
+    border-radius: 0.5rem;  
+    overflow: hidden;
+    padding: 0.4rem;
+}
+
+.item-found-image{
+    height: 9rem;
+    width: 9rem;
+    border-radius: 0.5rem;
+}
+
+/* item description */
+.item-description-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 14rem;
+    padding: 0.5rem;
+}
+
+.item-description-div p{
+    padding: 0.2rem 0.4rem;
+    color: #cfd2d8;
+}
+
+.items-div:nth-child(2) .item-description-div .claimed-text{
+    color:#fbbf24;
+}
+
+/* for location icon */
+.item-des-loc{
+    position: relative;
+    height: 1rem;
+    width: 1rem;
+    top: 0.2rem;
+}
+
+/* for calende icon */
+.item-des-cal{
+    position: relative;
+    height: 1rem;
+    width: 1rem;
+    top: 0.1rem;
+}
+
+/* item status */
+.item-status{
+    width: 9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-status p{
+    background-color: rgba(0, 61, 0, 0.267);
+    color: #cfd2d8;
+    text-align: center;
+    padding: 0.4rem;
+    margin: 0.2rem;
+    border-radius: 0.4rem;
+    border: 1px solid #164b06;
+}
+
+.items-div:nth-child(2) .item-status p{
+    background-color: #4732003d;
+    border-color: #fbbe249f;
+}
+
+.items-div:nth-child(5) .item-status p{
+    background-color: #3b000050;
+    border-color: #ff0101a2;
+}
