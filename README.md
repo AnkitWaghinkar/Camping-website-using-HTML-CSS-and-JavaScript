@@ -27,70 +27,70 @@ Along with index.html (main page) it includes Camping Gear page, Gallery page, F
 - Final deployment and testing.
 
 ## Deployment
-Live site: https://camping-website-html-css-js.netlify.app/
-backup github live: https://ankitwaghinkar.github.io/Camping-website-using-HTML-CSS-and-JavaScript/
+-Live site: https://camping-website-html-css-js.netlify.app/
+-backup github live: https://ankitwaghinkar.github.io/Camping-website-using-HTML-CSS-and-JavaScript/
 
 ## Screenshots
 
 ### Home Page
 ![Home](screenshots/home.png) 
 
-
+---
 
 ### Details Page
 ![Details](screenshots/details.png)  
 
-
+---
 
 ### Camping Gear Page
 ![Camping Gear](screenshots/camping-gear.png)  
 
-
+---
 
 ### Booking Page
 ![Booking](screenshots/booking-cards.png)  
 
-
+---
 
 ### Gallery Page
 ![Gallery](screenshots/gallery.png)  
 
-
+---
 
 ### About Us Page
 ![About Us](screenshots/about-us.png)  
 
-
+---
 
 ### Contact Us Page
 ![Contact Us](screenshots/contact-us.png)  
 
-
+---
 
 ### FAQ Page
 ![FAQ](screenshots/faq.png)  
 
-
+---
 
 ### Lost & Found Page
 ![Lost & Found](screenshots/lost-found.png)  
 
-
+---
 
 ### Disclaimer Page
 ![Disclaimer](screenshots/disclaimer.png)  
 
-
+---
 
 ### Privacy Policy Page
 ![Privacy Policy](screenshots/privacy.png)  
 
-
+---
 
 ### Terms & Conditions Page
 ![Terms & Conditions](screenshots/terms.png)  
 
-
+---
 
 ## Challenges
 - Anchor links were not working → resolved.
