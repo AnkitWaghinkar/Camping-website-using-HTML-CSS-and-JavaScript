@@ -27,8 +27,8 @@ Along with index.html (main page) it includes Camping Gear page, Gallery page, F
 - Final deployment and testing.
 
 ## Deployment
--Live site: https://camping-website-html-css-js.netlify.app/
--backup github live: https://ankitwaghinkar.github.io/Camping-website-using-HTML-CSS-and-JavaScript/
+- Live site: https://camping-website-html-css-js.netlify.app/
+- backup github live: https://ankitwaghinkar.github.io/Camping-website-using-HTML-CSS-and-JavaScript/
 
 ## Screenshots
 
