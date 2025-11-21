@@ -13,8 +13,8 @@ Along with index.html (main page) it includes Camping Gear page, Gallery page, F
 ## Technologies Used
 - HTML5, CSS3, JavaScript.
 - Git & GitHub for version control.
-- Netlify for deployment.
-- GitHub as backup for deployment.
+- GitHub for deployment.
+- Netlify for backup deployment.
 
 ## Development Log
 - Project planning and wireframing.
@@ -27,8 +27,8 @@ Along with index.html (main page) it includes Camping Gear page, Gallery page, F
 - Final deployment and testing.
 
 ## Deployment
-- Live site: https://camping-website-html-css-js.netlify.app/
-- backup github live: https://ankitwaghinkar.github.io/Camping-website-using-HTML-CSS-and-JavaScript/
+- github Live: https://camping-website-html-css-js.netlify.app/
+- Netlify backup: https://ankitwaghinkar.github.io/Camping-website-using-HTML-CSS-and-JavaScript/
 
 ## Screenshots
 
