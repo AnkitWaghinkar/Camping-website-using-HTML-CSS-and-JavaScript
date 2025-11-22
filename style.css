@@ -107,7 +107,7 @@ nav li img{
     right: 0;
     width: 250px;
     z-index: 999;
-    background-color: var(--sidebar-bg);
+    background-color: var(--nav-bg);
     backdrop-filter: blur(10px);
     box-shadow: -10px 0px 10px 0 rgba(0, 0, 0, 0.329);
     display: none;
